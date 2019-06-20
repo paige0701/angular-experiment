@@ -6,7 +6,7 @@ import {NgContentModule} from '../ng-content/ng-content.module';
 
 const routes: Routes = [
   {path: '', component: LayoutComponent, children: [
-      {path: 'ng-content', loadChildren: 'app/ng-content/ng-content.module#NgContentModule'}
+      {path: 'ng-content', loadChildren: () => import('app/ng-content/ng-content.module').then(m => m.NgContentModule)}
     ]},
 ];
 

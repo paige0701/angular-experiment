@@ -5,7 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {LayoutModule} from './layout/layout.module';
 
 const appRoutes: Routes = [
-  {path: '', loadChildren: 'app/layout/layout.module#LayoutModule'},
+  {path: '', loadChildren: () => import('app/layout/layout.module').then(m => m.LayoutModule)},
   // {path: 'ng-content', loadChildren: 'app/ng-content/ng-content.module#NgContentModule'}
 ]
 

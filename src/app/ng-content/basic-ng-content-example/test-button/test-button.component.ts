@@ -10,7 +10,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class TestButtonComponent implements OnInit {
 
-  @ViewChild('btn')
+  @ViewChild('btn', {static: true})
   btn: ElementRef;
 
   constructor() { }

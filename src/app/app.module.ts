@@ -1,14 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import {RouterModule, Routes} from '@angular/router';
+import {LayoutModule} from './layout/layout.module';
+
+const appRoutes: Routes = [
+  {path: '', loadChildren: 'app/layout/layout.module#LayoutModule'},
+  // {path: 'ng-content', loadChildren: 'app/ng-content/ng-content.module#NgContentModule'}
+]
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

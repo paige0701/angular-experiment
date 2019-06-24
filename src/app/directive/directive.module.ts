@@ -4,6 +4,7 @@ import {DirectiveComponent} from './directive.component';
 import {DirectiveRoutingModule} from './directive.route';
 import {RouterModule} from '@angular/router';
 import {HoverExampleModule} from './hover-example/hover-example.module';
+import {OtherExampleModule} from './other-example/other-example.module';
 
 @NgModule({
   declarations: [DirectiveComponent],
@@ -11,7 +12,8 @@ import {HoverExampleModule} from './hover-example/hover-example.module';
     CommonModule,
     RouterModule,
     DirectiveRoutingModule,
-    HoverExampleModule
+    HoverExampleModule,
+    OtherExampleModule
   ]
 })
 export class DirectiveModule { }

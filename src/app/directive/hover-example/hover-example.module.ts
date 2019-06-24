@@ -8,7 +8,9 @@ const routes: Routes = [
   {path: 'directive/hover-examples', component: HoverExampleComponent}]
 
 @NgModule({
-  declarations: [HoverExampleComponent, HoverBorderEmphasisDirective],
+  declarations: [
+    HoverExampleComponent,
+    HoverBorderEmphasisDirective],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)

@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 import {LayoutComponent} from './layout.component';
 import {RouterModule, Routes} from '@angular/router';
 import {NgContentModule} from '../ng-content/ng-content.module';
+import {DirectiveModule} from '../directive/directive.module';
 
 const routes: Routes = [
   {path: '', component: LayoutComponent, children: [
-      {path: 'ng-content', loadChildren: () => import('app/ng-content/ng-content.module').then(m => m.NgContentModule)}
+      {path: 'ng-content', loadChildren: () => import('app/ng-content/ng-content.module').then(m => m.NgContentModule)},
+      {path: 'directive', loadChildren: () => import('app/directive/directive.module').then(m => m.DirectiveModule)}
+
     ]},
 ];
 
@@ -14,7 +17,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    NgContentModule
+    NgContentModule,
+    DirectiveModule
   ],
   declarations: [LayoutComponent]
 })

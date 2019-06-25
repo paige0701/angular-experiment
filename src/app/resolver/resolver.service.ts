@@ -9,8 +9,12 @@ export class ResolverService {
 
   constructor(private http: HttpClient) { }
 
-  getList(): Observable<Array<any>> {
-    return this.http.get(``) as Observable<Array<any>>
+  getEmployees(): Observable<Array<any>> {
+    return this.http.get(`	http://dummy.restapiexample.com/api/v1/employees`) as Observable<Array<any>>
+  }
+
+  checkRuns(): Observable<any> {
+    return this.http.get(`https://jsonplaceholder.typicode.com/posts`) as Observable<any>
   }
 
   getDetail(id: string): Observable<any> {

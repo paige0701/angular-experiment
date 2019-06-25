@@ -22,11 +22,11 @@ export class ResolverComponentResolver implements Resolve<Observable<Object>> {
     //   detail : this.resolverService.getDetail('id')
     //   }
     // )
-    return this.resolverService.getList().pipe(catchError(error   => {
+    return this.resolverService.checkRuns().pipe(catchError(error   => {
         return 'Error'
       }), mergeMap(something => {
         if (something) {
-          return of('Resolver works !')
+          return of(something)
         } else {
           return 'Error';
         }

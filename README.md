@@ -10,5 +10,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 - directives (basic ussage of attribute and structural directives, practical usage)
   - Change css when hover an element
   - Change image source according to input
-
+- resolvers
 

@@ -1,7 +1,9 @@
 ## AngularExperiment
 
-### Start server
+### Description
 
+Angular version is 8.
+Applied angular material.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
 ### What am I studying?

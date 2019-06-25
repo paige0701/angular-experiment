@@ -7,8 +7,6 @@ export class CcLogoDirective implements OnChanges{
 
   constructor() { }
 
-
-
   @Input()
   cardNumber: string
 
@@ -39,7 +37,7 @@ export class CcLogoDirective implements OnChanges{
   }
 }
 
-enum CardType {
+const enum CardType {
   AMERICAN_EXPRESS = 'american-express',
   MASTER = 'mastercard',
   VISA = 'visa',

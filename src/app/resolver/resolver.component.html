@@ -1,3 +1,25 @@
-<p>
-  resolver works!
-</p>
+<h3>Resolvers</h3>
+
+<div>
+  <div>Resolver allows you to get data before navigating to the new route</div>
+  <div>
+    Sometimes you need some data ready before you navigate to certain route. This data may be
+    from server. You can use resolver for this action.
+
+    <ol>
+      <li>Make a resolver. I made my resolver as resolver.component.resolver.ts
+      Here I'm fetching some list data from server</li>
+      <li>Configure the routes in resolver.module.ts.
+       <span>`path: 'resolver', component: ResolverComponent, resolve: resolvedData: ResolverComponentResolver` this is the important part.
+      So when navigating to /resolver resolver will be activated and whatever data you get from the resolver I can access it by the variable resolvedData
+      </span>
+      </li>
+      <li>accessing resolvedData
+        From resolverComponent, inject an activatedRoute in constructor.
+        You can access the data by route.snapshot.data.resolvedData. Here resolvedData is the variable I set in the module.
+      </li>
+    </ol>
+
+
+  </div>
+</div>
